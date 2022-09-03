@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function save(){
+            var name=document.getElementById("name");
+            var add=document.getElementById("add");
+            var phone=document.getElementById("phone");
+            
+            var Table =document.getElementById("playlist");
+            var tr =document.createElement("tr"); 
+            Table.appendChild(tr);
+            
+            var td =document.createElement("td");
+            tr.appendChild(td);
+            var input=name.value;
+            td.innerHTML=input;
+
+            var td =document.createElement("td");
+            input=add.value;
+            console.log(input); 
+            td.innerHTML=input;
+            tr.appendChild(td);
+
+            var td =document.createElement("td");
+            input=phone.value;
+            console.log(input); 
+            td.innerHTML=input;
+            tr.appendChild(td);
+
+        }
+        </script>
+        <style>
+        table, th, td {
+            border:1px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <form>
+            ชื่อลูกค้า:<input type="text" id="name"><br>
+            ที่อยู่:<input type="text" id="add"><br>
+            โทรศัพท์:<input type="text" id="phone"><br>
+            <input type="button" value="เพิ่ม" onclick="save()">
+        </form>
+        <table id="playlist">
+            <tr>
+                <th>ชื่อลูกค้า</th>
+                <th>ที่อยู่</th>
+                <th>โทรศัพท์</th>
+            </tr>
+        </table>
+    </body>
+</html>
